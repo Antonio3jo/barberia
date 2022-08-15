@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Contacto</title>
+</head>
+    
+<body>
+    <header>
+     
+        <div class="caja">
+            <h1><img src="imagenes/logo.png" alt="Logo Barberia Alura"></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- Todo formulario tiene esa estructura: un form, label con sus input y el submit. El required al final del input es para ponerlo como campo obligatorio -->
+      <form>
+        <label for="nombre">Nombre y Apellido</label>
+        <input type="text" id="nombre" class="input-padron" required>
+        
+        <label for="correo">Correo Electronico</label>
+        <input type="email" id="correo" class="input-padron" required placeholder="ejemplo@dominio.com">
+        
+        <label for="telefono">Telefono</label>
+        <input type="tel" id="telefono" class="input-padron" required placeholder="(xx) xxxx xxxx">
+
+        <label for="mensaje">Mensaje</label>
+        <textarea type="text" id="mensaje" cols="70" rows="10" class="input-padron"></textarea>
+
+       <fieldset>
+         <!-- aqui los tres Radio  se coloca name=contacto para todos lo que indica que solo puede activarse uno. como todos son radio se usa fieldset en lugar de div y en vez de p se usa legend-->
+           <!-- <p>¿Como desea ser Contactado?</p> -->
+           <legend>¿Como desea ser Contactado?</legend>
+
+
+           <label for="radio-email"><input type="radio" value="email" id="radio-email" name="contacto">
+            Email</label>
+           
+           <label for="radio-telefono"><input type="radio" value="email" id="radio-telefono" name="contacto" checked>Telefono</label>
+           
+
+           <label for="radio-whatsapp"><input type="radio" value="email" id="radio-whatsapp" name="contacto">Whatsapp</label>
+     
+        
+
+        <!-- pruebas
+        <label> <input type="textarea" cols="30" rows="5" placeholder="Escribe algo aqui">TextArea prueba</label>
+
+        <label> <input type="radio" value="xxx" name="contacto">radio</label> -->
+
+       </fieldset>
+
+       <!-- aqui creare un select para escoger horario de atencion: mañana, tarde o noche. aqui tambien quito el div por fieldset -->
+       <fieldset>
+          <!-- <p>¿En que horario deseas ser contactado?</p> -->
+          <legend>¿En que horario deseas ser contactado?</legend>
+            <select>
+                <option>Mañana</option>
+                <option>Tarde</option>
+                <option>Noche</option>
+            </select>
+           
+
+       </fieldset>
+       
+       <!-- el checked en el input es para que salga tildado por defecto -->
+
+       <label> <input type="checkbox" class="checkbox" checked>¿Le gustaria recibir novedades de la barberia Alura?</label>
+
+        
+        <input type="submit" value="Enviar Formulario" class="enviar">
+
+</form>
+<!-- usamos etiqueta table, cada tr es una fila y luego lleva dentro su td de acuerdo a cuantas columnas tenga -->
+<table>
+    <!-- dentro del thead va el tr pero estas dos columnas encabezado se les pone th-->
+    <thead>
+        <tr>
+            <th>Día</th>
+            <th>Horario</th>
+         
+        </tr>
+    </thead>
+    <!-- luego las otras filas van dentro de tbody -->
+    
+    <tbody>
+        <!-- fila 2 -->
+       <tr>
+          <td>Lunes</td>
+          <td>08h -20h</td>
+      </tr>
+        <!-- fila 3 -->
+       <tr>
+         <td>Miercoles</td>
+         <td>08h -20h</td>
+       </tr>
+        <!-- fila 4 -->
+       <tr>
+         <td>Viernes</td>
+         <td>08h -20h</td>
+       </tr>
+
+    </tbody>
+    
+
+</table>
+
+
+
+    </main>
+    <footer>
+        <img src="imagenes/logo-blanco.png" alt="Logo Barberia Alura">
+        <p class="copyright">&copy Copyright Barbería Alura - 2020</p>
+    </footer>
+    
+</body>
+</html>
